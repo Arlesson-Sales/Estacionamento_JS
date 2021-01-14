@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Estacionamento</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body onload="parking.interface.loadEvents()">
+    <main>
+      
+      <header class="formHeader">
+        <h2>Estacionamento JS</h2>
+      </header>
+      
+      <form class="mainForm" method="post" action="#">
+        <div class="container-control">
+          <label for="carModel">Modelo do veículo:</label>
+          <input id="carModel" type="text" placeholder="Digite o nome do carro">
+        </div>
+        <div class="container-control">
+          <label for="carPlate">Placa do veículo:</label>
+          <input id="carPlate" type="text" placeholder="Digite a placa do carro">
+        </div>
+        <div class="container-control">
+          <div>
+            <input id="addButton" type="button" value="Adicionar">
+          </div>
+        </div>
+      </form>
+      
+      <section class="table-container">
+        <table hidden id="carTable" class="carTable" cellpadding="0" cellspacing="0">
+          <thead>
+            <tr>
+              <th>Modelo</th>
+              <th>Placa</th>
+              <th>Entrada</th>
+              <th>Finalizar</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </section>
+      
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
